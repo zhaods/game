@@ -1,0 +1,113 @@
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video{margin:0;padding:0}
+article,aside,footer,header,hgroup,nav,section,audio,canvas,video,img{display:block}
+body{font-size:100%;font-family:Helvetica,STHeiti,Droid Sans Fallback;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+textarea{resize:none}
+iframe,img{border:0}
+ul,ol{list-style:none}
+input,select,textarea{outline:0;-webkit-user-modify:read-write-plaintext-only}
+input{-webkit-appearance:none}
+a{text-decoration:none}
+h1,h2,h3,h4{font-weight:100}
+/*page*/
+body,html{width:100%;height:100%;position:relative;overflow:hidden;-webkit-backface-visibility:hidden;background:#000}
+.global{position:relative;height:100%;width:100%;-webkit-transform-style:preserve-3d;-webkit-backface-visibility:hidden}
+.screen{-webkit-transform-style:preserve-3d}
+.ease{-webkit-transition:all 1.0s ease-in-out}
+.layout{position:relative;overflow:hidden}
+.layout img{width:100%;display:block;}
+.layoutbg{width:100%;position:absolute;left:0;top:0}
+.swipeTip{width:24px;height:15px;margin:0 0 0 -7px;position:absolute;left:50%;bottom:12px;background:url(../images/up.png) no-repeat;-webkit-background-size:100% 100%;background-size:100% 100%;z-index:999}
+/*load*/
+/*load*/
+.layout{background-size: 100%;}
+/*修改代码*/
+#layout_1{background:url(../images/p1.jpg) no-repeat 0 0/100% 100%;}
+.p1_img1{position: absolute;font-size: 0.3rem;color: #fff;text-align: center;left: 1.13rem;bottom: 3rem;}
+.p1_img1 p{font-family: 'Microsoft Yahei';text-align: center;}
+
+
+.p1_logo{position: absolute;top:0;width: 7.5rem;}
+.p1_bt{position: absolute;width: 7.5rem;bottom: 0.9rem;}
+.animate .p1_bt{-webkit-animation: fadeIn 0.8s 0.5s ease-out; -webkit-animation-fill-mode: both;}
+.animate .p1_img1{-webkit-animation: fadeIn 0.8s 0.5s ease-out; -webkit-animation-fill-mode: both;}
+.animate .p1_logo{-webkit-animation: fadeIn 0.8s 0.2s ease-out; -webkit-animation-fill-mode: both;}
+
+
+/*2*/
+
+#layout_2{background:url(../images/p2.jpg) no-repeat 0 0/100% 100%;}
+/*brand*/
+.brand{width:100%;position:relative;}
+.brand .rwconter{width:5.36rem;height:9.55rem;position: absolute;left: 1.04rem;top:1.1rem;}
+.brand .rwconter .swiper-slide{position:relative;}
+.brand .rwconter img{position:absolute;top:0;width:100%;}
+
+.animate .text{-webkit-animation: p1-02 0.8s 0.8s ease-out; -webkit-animation-fill-mode: both;}
+@-webkit-keyframes p1-02{
+    0%{
+        opacity: 0;
+        -webkit-transform:translateY(20px) ;
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform:translateY(0px) ;
+    }
+}
+.brand .loop a.arrow-left,.brand .loop a.arrow-right{width:.27rem;height:.68rem;position:absolute;top:48%;z-index: 2;}
+.brand .loop a.arrow-left{left:.56rem;background:url(../images/left.png) no-repeat 0 0/100% 100%;}
+.brand .loop a.arrow-right{right:.56rem;background:url(../images/right.png) no-repeat 0 0/100% 100%;}
+.brand .pagination{position:absolute;width:100%;text-align:center;bottom: 2rem;}
+.brand .swiper-pagination-switch{width:.19rem;height:.19rem;background: #00a0e9;display:inline-block;margin:0 .07rem;border-radius: 50%;}
+.brand .swiper-active-switch{width:.19rem;height:.19rem;background: #00ffff;display:inline-block;}
+
+/*3*/
+#layout_3{background:url(../images/p3.jpg) no-repeat 0 0/100% 100%;}
+.p3_logo{width: 5.31rem;margin:3.6rem auto 0;}
+.p3_img{margin:0.82rem auto 0;width: 4.35rem;}
+
+#layout_3 .tc{width: 100%;height: 100%;position: absolute;top:0;left: 0;z-index: 2;display: none;}
+#layout_3 .tc.animate{-webkit-animation: fadeIn 0.8s 0.8s ease-out; -webkit-animation-fill-mode: both;}
+
+.animate .p3_logo{-webkit-animation: fadeIn 1.8s 0.8s ease-out; -webkit-animation-fill-mode: both;}
+.animate .p3_txt{-webkit-animation: fadeIn 1.8s 1s ease-out; -webkit-animation-fill-mode: both;}
+.animate .p3_img{-webkit-animation: fadeIn 1.8s 1.5s ease-out; -webkit-animation-fill-mode: both;}
+.animate .p3_but{-webkit-animation: fadeIn 1.8s 2s ease-out; -webkit-animation-fill-mode: both;}
+
+
+/*箭头*/
+.swipeTip{-webkit-animation:2s fadeOutUp ease-in-out infinite;-moz-animation:2s fadeOutUp ease-in-out infinite}
+@-webkit-keyframes fadeOutUp{
+    0%{opacity:1;-webkit-transform:translateY(0px);transform:translateY(0px)}
+    50%{opacity:0.3;-webkit-transform:translateY(-10px);transform:translateY(-10px)}
+}
+@keyframes fadeOutUp{
+    0%{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}
+    50%{opacity:0.3;-webkit-transform:translateY(-10px);-ms-transform:translateY(-10px);transform:translateY(-10px)}
+}
+
+/*横屏提示*/
+.mask{width:100%;height:100%;background:#32373b;position:absolute;left:0;top:0;z-index:99999;display:none}
+.mask-box{width:100%;height:252px;position:absolute;top:50%;left:0;margin-top:-119px}
+.mask-pic{width:194px;height:194px;margin:0 auto;text-align:center}
+.mask span{font-size:22px;display:block;color:#ffd40a;text-align:center;width:100%;height:25px;padding-top:10px}
+.mask i{width:119px;height:199px;background:url(http://y2.ifengimg.com/7573d3fe499db027/2015/0120/bg6.png) 0 0 no-repeat;background-size:119px 199px;display:block;margin:0 auto;-webkit-animation:maskAni 1.5s ease infinite alternate;animation:maskAni 1.5s ease infinite alternate}
+@-webkit-keyframes maskAni{
+0% {-webkit-transform:rotate(0deg)}
+30% {-webkit-transform:rotate(0deg)}
+70%{-webkit-transform:rotate(-90deg)}
+100% {-webkit-transform:rotate(-90deg)}
+}
+@media all and (orientation : landscape) {
+.mask{display:block}
+} 
+/*loadPage*/
+.loadPage{background:#000; z-index: 9999;width: 100%;position: absolute;top: 0;bottom: 0;height:100%}
+.loading{position:absolute;width:80%;left:10%;top:200px;margin:0px auto;text-align:center;margin-top:-15px}
+.loading-num{height:25px;font-size:0.3em;text-align:center; color:#fff; }
+.loading-num span{margin-right:10px}
+.loading-num b{font-weight:100}
+.loading .inner{background-color:#CCC;border-radius:5px;overflow:hidden;background-color:#FFF;position:relative; z-index:10}
+.loading-progress{width:0;height:2px;text-align:center;background-color:#fff500;color:#FFF}
+/*page*/
+
+
