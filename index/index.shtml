@@ -95,8 +95,8 @@ doc.addEventListener('DOMContentLoaded', resizeCallback, false);
 <script type="text/javascript" src="http://y3.ifengimg.com/6b12b56939e61447/2016/5/touch.js"></script> 
 <script>
 function hengshuping(){  
-  if(window.orientation==180||window.orientation==0){  
-      $('.mask').css('display','block');
+  if(window.orientation==180||window.orientation==0){
+      $('.global').css('display','block');
    }
   if(window.orientation==90||window.orientation==-90){  
       $('.global').css('display','none');
