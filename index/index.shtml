@@ -99,32 +99,27 @@ function hengshuping(){
       $('.mask').css('display','block');
    }
   if(window.orientation==90||window.orientation==-90){  
-    
+
       alert('为了更好的体验，请将手机自动横屏关闭');
     }
 }
 window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
-var left_x=0,jd_num=0,right_x=0;
+
+$(document).on('touchend',function  () {
+  $('img#car_l').css({'transform':'rotate('+0+'deg)','-ms-transform':'rotate('+0+'deg)','-moz-transform':'rotate('+0+'deg)','-webkit-transform':'rotate('+0+'deg)','-o-transform':'rotate('+0+'deg)'});
+})
+
+var jd_num=0;
 $('.left_but').on('touchstart',function  () {
-  left_x++;
-  jd_num=left_x*1.2; //角度
-  if(jd_num>=24){
-    left_x=20;
-  }
+  jd_num=8*2; //角度
   $('img#car_l').css({'transform':'rotate('+-jd_num+'deg)','-ms-transform':'rotate('+-jd_num+'deg)','-moz-transform':'rotate('+-jd_num+'deg)','-webkit-transform':'rotate('+-jd_num+'deg)','-o-transform':'rotate('+-jd_num+'deg)'});
-  
 })
 
 $('.right_but').on('touchstart',function  () {
-  right_x++;
-  jd_num=right_x*1.2; //角度
-  if(jd_num>=24){
-    right_x=20;
-  }
+  jd_num=8*2; //角度
   $('img#car_l').css({'transform':'rotate('+jd_num+'deg)','-ms-transform':'rotate('+jd_num+'deg)','-moz-transform':'rotate('+jd_num+'deg)','-webkit-transform':'rotate('+jd_num+'deg)','-o-transform':'rotate('+jd_num+'deg)'});
 })
-
-</script> 
+</script>
 <script>
 /* ua */
 var UA = function() {
