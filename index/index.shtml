@@ -96,7 +96,7 @@ function hengshuping(){
         $('.mask').css('display','block');
    }  
 if(window.orientation==90||window.orientation==-90){  
-      alert('15:25')
+      alert('15:30')
         $('.mask').css('display','none');
     }  
  }
