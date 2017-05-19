@@ -160,7 +160,8 @@ function hengshuping(){
         alert("竖屏状态！")
    }  
 if(window.orientation==90||window.orientation==-90){  
-        alert("横屏状态！")
+      alert('14:52')
+        $('.mask').css('display','none');
     }  
  }
 window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false); 
