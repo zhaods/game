@@ -99,7 +99,7 @@ function hengshuping(){
       $('.mask').css('display','block');
    }
   if(window.orientation==90||window.orientation==-90){  
-
+      $('.global').css('display','none');
       alert('为了更好的体验，请将手机自动横屏关闭');
     }
 }
