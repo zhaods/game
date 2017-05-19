@@ -57,7 +57,7 @@ doc.addEventListener('DOMContentLoaded', resizeCallback, false);
 </script> 
 <!-- loading begin --> 
 <div class="loadPage" style="z-index: 99999;"> 
- <div class="loading"> 
+ <div class="loading">
   <div class="loading-num"> 
    <span>Loading...</span> 
    <b></b> 
@@ -96,29 +96,11 @@ function hengshuping(){
         $('.mask').css('display','block');
    }  
 if(window.orientation==90||window.orientation==-90){  
-      alert('15:18')
+      alert('15:25')
         $('.mask').css('display','none');
     }  
  }
 window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
-  var swiperNested4 = new Swiper('.swiper-nested-4',{
-    pagination: '.pagination',
-    paginationClickable: true,
-    loop:false,
-    grabCursor: true
-  })
-$('.l4').on('click', function(e){
-  e.preventDefault()
-  swiperNested4.swipePrev()
-});
-$('.r4').on('click', function(e){
-  e.preventDefault()
-  swiperNested4.swipeNext()
-});
-$('.p3_but').on('click', function(e){
-  $('.tc').show();
-  $('.tc').addClass('animate');
-});
 </script> 
 <script>
 /* ua */
@@ -170,9 +152,9 @@ var Layout = {
 		_this.swipe(_h, _len);
     
 		// 屏幕尺寸调整
-        $(window).resize(function(){
+        /*$(window).resize(function(){
             _this.init();
-        });
+        });*/
 	}
 }
 Layout.init();
