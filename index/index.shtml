@@ -73,20 +73,6 @@ doc.addEventListener('DOMContentLoaded', resizeCallback, false);
  <div class="screen"> 
   <!-- page 1 S --> 
   <section class="layout" id="layout_1">
-    <div class="p1_logo animated">
-      <img src="images/logo.png" alt="" />
-    </div>
-    <div class="p1_img1 animated">
-      <p>蒙牛新养道不仅是乳糖不耐的克星</p>
-      <p>更有着凤凰人对生活的领悟</p>
-      <p>愿数亿凤凰网友也能感受到这份“好营养”</p>
-    </div>
-    <div class="p1_bt animated">
-      <img src="images/bottom.png" alt="" />
-    </div>
-   <!-- 箭头 S --> 
-   <div class="swipeTip fadeOutUp"></div>
-   <!-- 箭头 E -->
   </section>
   <!-- page 1 E -->
  </div> 
@@ -95,7 +81,7 @@ doc.addEventListener('DOMContentLoaded', resizeCallback, false);
 <!-- 横屏提示 S --> 
 <div class="mask flexcontainer" id="mask"> 
  <div class="mask-box"> 
-  <div class="mask-pic"> 
+  <div class="mask-pic">
    <i></i> 
   </div> 
   <span>为了更好的体验，请将手机横过来</span> 
@@ -110,12 +96,11 @@ function hengshuping(){
         $('.mask').css('display','block');
    }  
 if(window.orientation==90||window.orientation==-90){  
-      alert('15:03')
+      alert('15:18')
         $('.mask').css('display','none');
     }  
  }
-window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false); 
-
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
   var swiperNested4 = new Swiper('.swiper-nested-4',{
     pagination: '.pagination',
     paginationClickable: true,
@@ -147,7 +132,50 @@ var UA = function() {
 		weixin: /micromessenger/.test(userAgent)
 	};
 }
-
+/* page */
+var Layout = {
+	isScrll : false ,
+    page: function(i, _h){
+    	var _len = $(".layout").length;
+		$(".global").css({"-webkit-transform":"translate3d(0px, -" + _h * i + "px, 0px)"});
+		$(".layout").removeClass("animate");
+    $(".rwtuwarp").removeClass("animate");
+		$("#layout_" + (i + 1)).addClass("animate");
+    $('.tc').hide();
+		pageIndex = i;
+		//顶部栏判断，如果索引内容后还有单独的页面，这部分要重新判断。
+	},
+	swipe: function(_h, _len){
+        var _this = this;
+        $(".layout").each(function(index1, obj){
+            $(obj).on("swipeUp", function(){
+                if(index1<_len-1){
+                _this.page(index1 + 1, _h);} 
+            }).on("swipeDown", function(){
+                _this.page(index1 - 1, _h);
+            });
+        }); 
+    },
+	init: function() {
+		var _this = this,
+			_w = $(window).width(),
+			_h = $(window).height(),
+			_len = $(".layout").length;
+		var ua = UA();
+    $(".global").width( _w ).height( _h * _len ).addClass("ease");
+		$(".screen").width(_w).height(_h * _len);
+		$(".layout").width(_w).height(_h);
+     
+    _this.page(0, _w);
+		_this.swipe(_h, _len);
+    
+		// 屏幕尺寸调整
+        $(window).resize(function(){
+            _this.init();
+        });
+	}
+}
+Layout.init();
 /* loadImg  图片预加载 */
 var loadImg = function(pics, callback) {
 	var index = 0;
