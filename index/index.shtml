@@ -88,57 +88,7 @@ doc.addEventListener('DOMContentLoaded', resizeCallback, false);
    <div class="swipeTip fadeOutUp"></div>
    <!-- 箭头 E -->
   </section>
-  <!-- page 1 E --> 
-  <!-- page 2 S --> 
-  <section class="layout brand" id="layout_2"> 
-    <div class="loop loop4">
-      <a class="arrow-left l4" href="javascript:;"></a> 
-      <a class="arrow-right r4" href="javascript:;"></a> 
-      <div class="rwconter swiper-container swiper-nested-4" style="cursor: -webkit-grab;">
-        <div class="rwnei swiper-wrapper"> 
-          <div class="swiper-slide"> 
-            <img src="images/r_img7.jpg" alt="" />
-          </div> 
-          <div class="swiper-slide"> 
-            <img src="images/r_img3.jpg" alt="" />
-          </div> 
-          <div class="swiper-slide"> 
-            <img src="images/r_img1.jpg" alt="" />
-          </div> 
-          <div class="swiper-slide"> 
-            <img src="images/r_img8.jpg" alt="" />
-          </div>
-          <div class="swiper-slide"> 
-            <img src="images/r_img6.jpg" alt="" />
-          </div>
-          <div class="swiper-slide"> 
-            <img src="images/r_img4.jpg" alt="" />
-          </div>
-          <div class="swiper-slide"> 
-            <img src="images/r_img2.jpg" alt="" />
-          </div>
-          <div class="swiper-slide"> 
-            <img src="images/r_img5.jpg" alt="" />
-          </div>
-        </div> 
-      </div>
-      <div class="pagination"></div>
-    </div>
-   <!-- 箭头 S --> 
-    <div class="swipeTip fadeOutUp"></div> 
-   <!-- 箭头 E -->
-  </section>
-  <!-- page 2 E --> 
-  <!-- page 3 S --> 
-  <section class="layout" id="layout_3"> 
-    <div class="p3_logo animate">
-      <img src="images/p3_txt.png" alt="" />
-    </div>
-    <div class="p3_img">
-      <img src="images/p3_logo.png" alt="" />
-    </div>
-  </section>
-  <!-- page 3 E -->
+  <!-- page 1 E -->
  </div> 
 </div> 
 <!-- global E  --> 
@@ -160,7 +110,7 @@ function hengshuping(){
         $('.mask').css('display','block');
    }  
 if(window.orientation==90||window.orientation==-90){  
-      alert('14:58')
+      alert('15:03')
         $('.mask').css('display','none');
     }  
  }
