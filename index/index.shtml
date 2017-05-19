@@ -73,20 +73,23 @@ doc.addEventListener('DOMContentLoaded', resizeCallback, false);
  <div class="screen"> 
   <!-- page 1 S --> 
   <section class="layout" id="layout_1">
+    <div class="left_but"></div>
+      <img src="images/lz.png" alt="" id="car_l" />
+    <div class="right_but"></div>
   </section>
   <!-- page 1 E -->
  </div> 
 </div> 
 <!-- global E  --> 
 <!-- 横屏提示 S --> 
-<div class="mask flexcontainer" id="mask"> 
+<!-- <div class="mask flexcontainer" id="mask"> 
  <div class="mask-box"> 
   <div class="mask-pic">
    <i></i> 
   </div> 
   <span>为了更好的体验，请将手机横过来</span> 
  </div> 
-</div> 
+</div>  -->
 <!-- 横屏提示 E --> 
 <script type="text/javascript" src="http://y3.ifengimg.com/6b12b56939e61447/2016/5/zepto.min.js"></script> 
 <script type="text/javascript" src="http://y3.ifengimg.com/6b12b56939e61447/2016/5/touch.js"></script> 
@@ -96,11 +99,24 @@ function hengshuping(){
         $('.mask').css('display','block');
    }  
 if(window.orientation==90||window.orientation==-90){  
-      alert('15:30')
+      alert('15:50')
         $('.mask').css('display','none');
-    }  
+    }
  }
 window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
+var left_x=0,jd_num=0,right_x=0;
+$('.left_but').on('click',function  () {
+  left_x++;
+  jd_num=left_x*1.2; //角度
+  $('img#car_l').css({'transform':'rotate('+-jd_num+'deg)','-ms-transform':'rotate('+-jd_num+'deg)','-moz-transform':'rotate('+-jd_num+'deg)','-webkit-transform':'rotate('+-jd_num+'deg)','-o-transform':'rotate('+-jd_num+'deg)'});
+})
+
+$('.right_but').on('click',function  () {
+  right_x++;
+  jd_num=right_x*1.2; //角度
+  $('img#car_l').css({'transform':'rotate('+jd_num+'deg)','-ms-transform':'rotate('+jd_num+'deg)','-moz-transform':'rotate('+jd_num+'deg)','-webkit-transform':'rotate('+jd_num+'deg)','-o-transform':'rotate('+jd_num+'deg)'});
+})
+
 </script> 
 <script>
 /* ua */
