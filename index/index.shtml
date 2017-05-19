@@ -72,7 +72,7 @@ doc.addEventListener('DOMContentLoaded', resizeCallback, false);
 <div class="global"> 
  <div class="screen"> 
   <!-- page 1 S --> 
-  <section class="layout" id="layout_1"> 
+  <section class="layout" id="layout_1">
     <div class="p1_logo animated">
       <img src="images/logo.png" alt="" />
     </div>
@@ -157,7 +157,7 @@ doc.addEventListener('DOMContentLoaded', resizeCallback, false);
 <script>
 function hengshuping(){  
   if(window.orientation==180||window.orientation==0){  
-        alert("竖屏状态！")
+        $('.mask').css('display','block');
    }  
 if(window.orientation==90||window.orientation==-90){  
       alert('14:52')
